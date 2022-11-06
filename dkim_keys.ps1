@@ -1,11 +1,12 @@
 # Depends on ExchangePowerShell Module
 
-# param(
-# [Paramater(Mandatory=$true)]
-# [string] $username
-# [Paramater(Mandatory=$true)]
-# [string] $domain
-# )
+[CmdletBinding()]
+param(
+  [Parameter(Mandatory=$true)]
+  [string] $username
+  [Parameter(Mandatory=$true)]
+  [string] $domain
+)
 
 Connect-ExchangeOnline -UserPricipalName $username
 
